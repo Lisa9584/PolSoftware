@@ -12,6 +12,13 @@ import gzip
 import PolMath 
 import PolLibrary 
 
+import seaborn as sns
+sns.set_style('darkgrid')
+
+from matplotlib import rc
+rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
+rc('text', usetex=True)
+
 #Read the events from the input file. The input file can be a .tra file. 
 #The input of the function is the path of the file to be read,
 #the output is a dictionary containing all the events. The keys of the dictionary
@@ -505,7 +512,7 @@ def histPlot(data, nbin, save_file = False, file_name = None):
     fig = plt.figure(tight_layout = True)
     ax = fig.add_subplot()
     n, bins, patches = ax.hist(data, bins = nbin)
-    ax.set_xlabel('Azitmuthal Angle, \u03C6 (\N{DEGREE SIGN})')
+    ax.set_xlabel('Azitmuthal Angle [deg]')
     ax.set_ylabel('Counts/degree')
     if save_file:
         fig.savefig(file_name)
@@ -532,7 +539,7 @@ def plotModulationCurve(xdata, ydata, yerrors, x_fit, y_fit, save_file = False, 
     ax.scatter(xdata, ydata, color = 'b')
     ax.errorbar(xdata, ydata, yerr = yerrors, linestyle = "None", color = 'b')
     ax.plot(x_fit, y_fit, color = 'black')
-    ax.set_xlabel('Azitmuthal Angle, \u03C6 (\N{DEGREE SIGN})')
+    ax.set_xlabel('Azitmuthal Angle [deg]')
     ax.set_ylabel('Counts')
     if save_file:
         fig.savefig(file_name)

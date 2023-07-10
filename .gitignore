@@ -1,3 +1,6 @@
 
 TEST/Pol/PolCrab.inc1.id1.tra.gz
 TEST/Unpol/UnPolCrab.inc1.id1.tra.gz
+__pycache__/PolAnalysis.cpython-37.pyc
+__pycache__/PolLibrary.cpython-37.pyc
+__pycache__/PolMath.cpython-37.pyc
