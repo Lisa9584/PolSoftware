@@ -66,18 +66,18 @@ reduced = True #If True, only the selected Compton events are stored in the memo
 #beginning of the polarized data file
 
 ##### FOR DEBUG ######
-detector_type = 'WFM'
-pol_in_file_name = 'TEST/Pol/PolCrab.inc1.id1.tra.gz'
-unpol_in_file_name = 'TEST/Unpol/UnPolCrab.inc1.id1.tra.gz'
-save_path = 'Save_dump'
-energy_range = [0, np.inf]
+#detector_type = 'WFM'
+#pol_in_file_name = 'TEST/Pol/PolCrab.inc1.id1.tra.gz'
+#unpol_in_file_name = 'TEST/Unpol/UnPolCrab.inc1.id1.tra.gz'
+#save_path = 'Save_dump'
+#energy_range = [0, np.inf]
 ######################
 
-#detector_type = sys.argv[1]
-#pol_in_file_name = sys.argv[2]
-#unpol_in_file_name = sys.argv[3]
-#save_path = sys.argv[4]
-#energy_range = [sys.argv[5], sys.argv[6]]
+detector_type = sys.argv[1]
+pol_in_file_name = sys.argv[2]
+unpol_in_file_name = sys.argv[3]
+save_path = sys.argv[4]
+energy_range = [sys.argv[5], sys.argv[6]]
 
 
 if verbose:
