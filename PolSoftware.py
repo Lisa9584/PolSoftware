@@ -13,9 +13,6 @@ import PolAnalysis as pa
 import seaborn as sns
 sns.set_style('darkgrid')
 
-from matplotlib import rc
-rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
-rc('text', usetex=True)
 
 def createNFTdetector():
     #Detector definition
@@ -159,7 +156,7 @@ if len(unpol_histogram) != 0 and len(pol_histogram) != 0:
     #Energy - Voxel Size - Normalization - Norm Error - Q - Q Error - Polarization Angle - Pol Angle Error - Number of Selected Events 
     if save_files:
         with  open(save_path+'/Corrected_Q_res.txt', 'w') as out_file:
-            out_file.write("{0} {1} {2} {3} {4} {5} {6} {7}\n".format(energy_range, detector.voxel_size, best_vals[0], fit_error_one_sigma[0], best_vals[1], fit_error_one_sigma[1], best_vals[2]*180/np.pi, fit_error_one_sigma[2]*180/np.pi))
+            out_file.write("{0} {1} {2} {3} {4} {5} {6} {7} {8}\n".format(energy_range, detector.voxel_size, best_vals[0], fit_error_one_sigma[0], best_vals[1], fit_error_one_sigma[1], best_vals[2]*180/np.pi, fit_error_one_sigma[2]*180/np.pi, selected_ev))
     else:
         print("CORRECTED {0} {1} {2} {3} {4} {5} {6} {7} {8}\n".format(energy_range, detector.voxel_size, best_vals[0], fit_error_one_sigma[0], best_vals[1], fit_error_one_sigma[1], best_vals[2]*180/np.pi, fit_error_one_sigma[2]*180/np.pi, selected_ev))
 
